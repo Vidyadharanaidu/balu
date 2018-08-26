@@ -1,0 +1,28 @@
+from selenium import webdriver
+import time
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Chrome('C:\\Users\\Vidyadhar\\Desktop\\chromedriver.exe')
+driver.get('https://www.gmail.com/')
+driver.maximize_window()
+driver.find_element_by_id('identifierId').send_keys('vidyadharkongara@gmail.com')
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="identifierNext"]/content/span').click()
+time.sleep(3)
+driver.find_element_by_name('password').send_keys('9963535610')
+time.sleep(3)
+driver.find_element_by_xpath('//*[@id="passwordNext"]/content/span').click()
+time.sleep(7)
+#driver.find_element_by_xpath('//*[@id=":ir"]/div/div').click()
+driver.find_element_by_xpath('//*[@id=":ir"]/div/div').click()
+time.sleep(4)
+driver.find_element_by_class_name('vO').send_keys('vidyakongara90@gmail.com')
+time.sleep(4)
+driver.find_element_by_xpath('//*[@id=":nr"]').send_keys('Python Resume')
+time.sleep(5)
+driver.find_element_by_xpath('//*[@id=":ow"]').send_keys('hi please find the below attachment of resume')
+time.sleep(6)
+driver.find_element_by_xpath('//*[@id=":ph"]').click()
+driver.find_element_by_css_selector("input[type=\"file\"]").send_keys("E:\\vidyadhar.docx")
+time.sleep(3)
+driver.find_element_by_id(":nh").click()
+
